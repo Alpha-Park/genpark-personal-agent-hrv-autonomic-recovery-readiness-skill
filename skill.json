@@ -1,0 +1,23 @@
+{
+  "name": "genpark-personal-agent-hrv-autonomic-recovery-readiness-skill",
+  "version": "1.0.0",
+  "description": "Evaluates HRV RMSSD autonomic nervous system readiness, monitors rolling baseline corridors, and prescribes daily deep-work and athletic strain limits.",
+  "tools": [
+    {
+      "name": "evaluate_daily_readiness",
+      "description": "Evaluates daily autonomic readiness and vagal tone from HRV RMSSD vs 30-day baseline.",
+      "parameters": {
+        "rmssd_ms": "float",
+        "resting_hr_bpm": "float (optional, default 58.0)",
+        "historical_rmssd_30d": "list of floats (optional)"
+      }
+    },
+    {
+      "name": "allocate_cognitive_physical_capacity",
+      "description": "Prescribes daily deep-work focus allowances and athletic exertion caps based on readiness.",
+      "parameters": {
+        "readiness_score": "float"
+      }
+    }
+  ]
+}
